@@ -30,7 +30,7 @@ __version__ = find_version('gatfilter/__init__.py')
 
 setup(
     name='gatfilter',
-    version='__version__',
+    version=__version__,
     packages=find_packages(),
     install_requires=[
         'numpy', 'pandas', 'nltk', 'matplotlib', 'scikit-learn','scipy'
