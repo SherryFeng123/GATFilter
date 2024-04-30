@@ -20,6 +20,11 @@ def find_version(fname):
         raise RuntimeError('Cannot find version information')
     return version
 
+def read(fname):
+    with open(fname, "r") as fh:
+        content = fh.read()
+    return content
+
 
 __version__ = find_version('gatfilter/__init__.py')
 
@@ -33,7 +38,7 @@ setup(
     author='Sherry J.H Feng',
     author_email='xxh8511@autuni.ac.nz',
     description='A library for filtering augment text based on geometric properties',
-    long_description=open('README.md').read(),
+    long_description=read("README.md"),
     long_description_content_type='text/markdown',
     url='https://github.com/SherryFeng123/gatfilter',
     classifiers=[
